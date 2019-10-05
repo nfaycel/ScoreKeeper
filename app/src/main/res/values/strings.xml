@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+        <string name="teamBscore">0</string>
+        <string name="team_a">Team A</string>
+        <string name="yel_card_TA">0</string>
+        <string name="red_card_TB">0</string>
+        <string name="yel_card_TB">0</string>
+        <string name="reset">RESET</string>
+        <string name="yellow_card_TB">+ YELLOW CARD</string>
+        <string name="red_card">+ RED CARD</string>
+        <string name="title_team_b">Team B</string>
+        <string name="gool_TB">Gool</string>
+        <string name="red_card_TB_score">0</string>
+        <string name="gool_TB_btn">Gool</string>
+        <string name="red_card_btn_A">+ RED CARD</string>
+    </resources>
+
