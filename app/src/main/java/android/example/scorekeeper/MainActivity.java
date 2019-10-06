@@ -1,85 +1,85 @@
 package android.example.scorekeeper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    int teamAscore = 0;
-    int teamBscore = 0;
-    int teamAred = 0;
-    int teamBred = 0;
-    int teamAyel = 0;
-    int teamByel = 0;
+import androidx.appcompat.app.AppCompatActivity;
 
-    TextView txtteamAscore, txtteamBscore, txtteam_A_red, txtteam_B_red, txtteam_A_yel, txtteam_B_yel;
+public class MainActivity extends AppCompatActivity {
+    int teamAScore = 0;
+    int teamBScore = 0;
+    int teamARed = 0;
+    int teamBRed = 0;
+    int teamAYel = 0;
+    int teamBYel = 0;
+    TextView txtTeamAScore;
+    TextView txtTeamBScore;
+    TextView txtTeamARed;
+    TextView txtTeamBRed;
+    TextView txtTeamAYel;
+    TextView txtTeamBYel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_main);
-
-        txtteamAscore = findViewById(R.id.textview_teama_score);
-        txtteamBscore = findViewById(R.id.textview_teamb_score);
-        txtteam_A_red = findViewById(R.id.score_redcard_TA);
-        txtteam_B_red = findViewById(R.id.score_redcard_TB);
-        txtteam_A_yel = findViewById(R.id.score_yellowcard_TA);
-        txtteam_B_yel = findViewById(R.id.score_yellowcard_TB);
+        txtTeamAScore = findViewById(R.id.textview_teama_score);
+        txtTeamBScore = findViewById(R.id.textview_teamb_score);
+        txtTeamARed = findViewById(R.id.score_redcard_TA);
+        txtTeamBRed = findViewById(R.id.score_redcard_TB);
+        txtTeamAYel = findViewById(R.id.score_yellowcard_TA);
+        txtTeamBYel = findViewById(R.id.score_yellowcard_TB);
     }
 
-
+    // reset the score of the two team (gools,red cards, yellow cards)
     public void reset(View view) {
-        teamAscore = 0;
-        txtteamAscore.setText(String.valueOf(teamAscore));
-        teamBscore = 0;
-        txtteamBscore.setText(String.valueOf(teamBscore));
-
-        teamAred = 0;
-        txtteam_A_red.setText(String.valueOf(teamAred));
-        teamBred = 0;
-        txtteam_B_red.setText(String.valueOf(teamBred));
-
-        teamAyel = 0;
-        txtteam_A_yel.setText(String.valueOf(teamAyel));
-        teamByel = 0;
-        txtteam_B_yel.setText(String.valueOf(teamByel));
+        teamAScore = 0;
+        txtTeamAScore.setText(String.valueOf(teamAScore));
+        teamBScore = 0;
+        txtTeamBScore.setText(String.valueOf(teamBScore));
+        teamARed = 0;
+        txtTeamARed.setText(String.valueOf(teamARed));
+        teamBRed = 0;
+        txtTeamBRed.setText(String.valueOf(teamBRed));
+        teamAYel = 0;
+        txtTeamAYel.setText(String.valueOf(teamAYel));
+        teamBYel = 0;
+        txtTeamBYel.setText(String.valueOf(teamBYel));
     }
-
+    //add a value of "1" to team A gools
     public void gool_TA(View view) {
-        teamAscore += 1;
-        txtteamAscore.setText(String.valueOf(teamAscore));
+        teamAScore += 1;
+        txtTeamAScore.setText(String.valueOf(teamAScore));
     }
-
+    //add a value of "1" to team B gools
     public void gool_TB(View view) {
-        teamBscore += 1;
-        txtteamBscore.setText(String.valueOf(teamBscore));
+        teamBScore += 1;
+        txtTeamBScore.setText(String.valueOf(teamBScore));
     }
-
+    //add a value of "1" to team A red cards
     public void redcard_TA(View view) {
-        teamAred +=1;
-        txtteam_A_red.setText(String.valueOf(teamAred));
-
+        teamARed += 1;
+        txtTeamARed.setText(String.valueOf(teamARed));
     }
+    //add a value of "1" to team B red cards
     public void redcard_TB(View view) {
-        teamBred +=1;
-        txtteam_B_red.setText(String.valueOf(teamBred));
+        teamBRed += 1;
+        txtTeamBRed.setText(String.valueOf(teamBRed));
     }
-
+    //add a value of "1" to team A yellow cards
     public void yelcard_TA(View view) {
-        teamAyel +=1;
-        txtteam_A_yel.setText(String.valueOf(teamAyel));
-
+        teamAYel += 1;
+        txtTeamAYel.setText(String.valueOf(teamAYel));
     }
+    //add a value of "1" to team B yellow cards
     public void yelcard_TB(View view) {
-        teamByel +=1;
-        txtteam_B_yel.setText(String.valueOf(teamByel));
+        teamBYel += 1;
+        txtTeamBYel.setText(String.valueOf(teamBYel));
     }
 }

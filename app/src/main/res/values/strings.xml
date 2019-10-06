@@ -13,5 +13,6 @@
         <string name="red_card_TB_score">0</string>
         <string name="gool_TB_btn">Gool</string>
         <string name="red_card_btn_A">+ RED CARD</string>
-    </resources>
+    <string name="yellow_card">+ YELLOW CARD</string>
+</resources>
 
